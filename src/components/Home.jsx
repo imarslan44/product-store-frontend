@@ -50,7 +50,7 @@ useEffect(() => {
  useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch('http://localhost:4000/api/products');
+        const res = await fetch('https://product-store-backend-fjey.onrender.com/api/products');
         const data = await res.json();
         setProducts(data);
         console.log(data) ;
@@ -95,7 +95,7 @@ const submitUpdate = async(e) => {
   if (!updatedProduct.name || !updatedProduct.price || !updatedProduct.image) {
     return alert("Please fill all fields");
   }       
-  const res = await fetch(`http://localhost:4000/api/products/${productId}`, {    
+  const res = await fetch(`https://product-store-backend-fjey.onrender.com/api/products/${productId}`, {    
     method: "PUT",
     headers: {
       "Content-Type": "application/json"

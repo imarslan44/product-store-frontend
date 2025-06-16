@@ -23,7 +23,7 @@ e.preventDefault();
 if(!NewProduct.name || !NewProduct.price || !NewProduct.image) {
   return alert("Please fill all fields");
 }
-const res = await fetch('http://localhost:4000/api/products', { 
+const res = await fetch('https://product-store-backend-fjey.onrender.com/api/products', { 
   method: "POST",
   headers: {
     "content-type": "application/json"

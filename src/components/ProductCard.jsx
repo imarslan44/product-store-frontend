@@ -13,7 +13,7 @@ const ProductCard = ({product}) => {
 console.log(pId);
 
   if(confirmDelete){
-  fetch(`http://localhost:4000/api/products/${pId}`,{
+  fetch(`https://product-store-backend-fjey.onrender.com/api/products/${pId}`,{
     method: "DELETE",
   });
 
